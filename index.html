@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook K1-M05</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { width: 95%; margin: auto; }
+        .dropdown { margin-bottom: 20px; }
+        .time-title { font-size: 1.2em; font-weight: bold; }
+        .activity { margin-bottom: 30px; }
+        .banner { background-color: #4CAF50; color: white; padding: 10px; cursor: pointer; }
+        .title { font-weight: bold; }
+        .subtitle { font-style: italic; }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook K1-M05</h1>
+        
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+        
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+        
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('revision_materiales')">
+                <div class="title">📚 Actividad 0: Revisión de Materiales (1 paso) ⏰ Tiempo: N/A</div>
+                <div class="subtitle">Preparar los materiales necesarios para la misión.</div>
+            </div>
+            <div id="revision_materiales" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (N/A):</strong> Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-1" class="activity">
+            <div class="banner" onclick="toggleContent('bienvenida')">
+                <div class="title">🎉 Actividad 1: Bienvenida e Introducción (2 pasos) ⏰ Tiempo: <span class="activity-time">1 minuto</span></div>
+                <div class="subtitle">Dar la bienvenida a los genios y presentar el Gimnasio CODE SQUAD.</div>
+            </div>
+            <div id="bienvenida" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (<span class="step-time">0.5 minutos</span>):</strong> Reproduce la DIAPOSITIVA 2 "Bienvenida" y Saluda a los genios con entusiasmo.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, CODE SQUAD! Bienvenidos al cuartel general. Hoy, vamos a embarcarnos en una misión muy especial en Robópolis. Pero antes de empezar, necesitamos preparar nuestros cerebros para el desafío.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (<span class="step-time">0.5 minutos</span>):</strong> Reproduce la DIAPOSITIVA 3 "Code Squad" y Saluda a los genios con entusiasmo.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Vamos a entrenar nuestros cerebros en el gimnasio del CODE SQUAD. Lo vamos a hacer con una canción y así podremos estar listos para el reto que tenemos enfrente el día de hoy en Robópolis.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-2" class="activity">
+            <div class="banner" onclick="toggleContent('baile_secuenciacion')">
+                <div class="title">💃 Actividad 2: Baile de Secuenciación (1 paso) ⏰ Tiempo: <span class="activity-time">2 minutos</span></div>
+                <div class="subtitle">Realizar una actividad de baile para ejercitar la secuenciación.</div>
+            </div>
+            <div id="baile_secuenciacion" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (<span class="step-time">2 minutos</span>):</strong> Reproduce la DIAPOSITIVA 4 "¡Baila con las frutas!" y guía a los niños para que sigan las instrucciones de la canción. Toma un bloque de color rojo, otro amarillo, otro azul y uno verde. Simulen las frutas y la acción con esos bloques.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora que estamos listos, ¡es hora de poner a prueba nuestro entrenamiento! Vamos a seguir las indicaciones de la canción. No se preocupen si la primera vez no pueden seguir todo lo que dice la canción, para eso es el gimnasio, para irnos ejercitando y que cada día sea más fácil.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-3" class="activity">
+            <div class="banner" onclick="toggleContent('planteamiento_problema')">
+                <div class="title">🤔 Actividad 3: Planteamiento del Problema (2 pasos) ⏰ Tiempo: <span class="activity-time">1.5 minutos</span></div>
+                <div class="subtitle">Presentar la historia y el reto a los estudiantes.</div>
+            </div>
+            <div id="planteamiento_problema" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (<span class="step-time">1 minuto</span>):</strong> Reproduce la DIAPOSITIVA 5 "Robópolis", adopta la actitud de un cuenta cuentos y narra la historia del diálogo.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> En el colorido mundo de Robópolis, donde todo es posible con la ayuda de la tecnología, se está organizando la gran "Carrera de los Robots". Los robots que participarán son los más valientes y hábiles de toda la ciudad, y entre ellos están los favoritos: Speedy, el robot más rápido; Strongbot, el robot más fuerte; y Clever, el robot más inteligente. Sin embargo, para poder participar en la carrera, estos robots necesitan ser ensamblados correctamente en el taller del Profesor Gizmo, el ingeniero más famoso de Robópolis.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (<span class="step-time">0.5 minutos</span>):</strong> Reproduce la DIAPOSITIVA 6 "Taller del Profesor Gizmo", sigue con la actitud del cuenta cuentos y cuenta el reto para el CODE SQUAD</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Cuando los robots llegan al taller, el Profesor Gizmo se da cuenta de que las piezas están todas mezcladas y no están etiquetadas correctamente. Speedy no tiene sus ruedas rápidas, Strongbot no tiene su poderoso brazo, y Clever no tiene su brillante cerebro. ¡La carrera está a punto de comenzar, y los robots no están listos! El Code SQUAD debe ayudar a ensamblar los robots rápidamente utilizando la abstracción para simplificar y organizar las piezas.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- Las actividades 4 y anteriores permanecen igual -->
+
+        <div id="activity-5-1" class="activity" data-age="3">
+            <div class="banner" onclick="toggleContent('reto_codificacion_3')">
+                <div class="title">💻 Actividad 5.1: Reto de Codificación (3 años) (3 pasos) ⏰ Tiempo: <span class="activity-time">10/10/14</span></div>
+                <div class="subtitle">Explicar y realizar el reto de codificación para estudiantes de 3 años.</div>
+            </div>
+            <div id="reto_codificacion_3" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (<span class="step-time">1/1/1</span>):</strong> Reproduce la DIAPOSITIVA 9 "Ejemplo Codificación K1" y explica a los Genios en qué consiste el reto.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Equipo CODE SQUAD! Para poder ayudar al profesor Gizmo a armar los robots para la carrera, vamos a facilitar el proceso de armado ayudando a crear un instructivo que permita armar a los robots más rápido. Para ello, nuestros bloques serán las piezas de los robots. Primero vamos a crear el código del instructivo. Vamos a representar cada pieza de los robots con un bloque de color como está en el ejemplo. Primero dibujo la pieza del robot y luego le asigno un bloque de color.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (<span class="step-time">2/2/2</span>):</strong> Reproduce la DIAPOSITIVA 10 "Entregar Materiales K1", después distribuye el papel y los materiales y asegúrate que cada niño tenga material para trabajar en parejas. Explica que van a crear un instructivo por equipo.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Aquí tienen su papel y colores. Ahora, en sus hojas, van a dibujar las partes del robot y asignarles bloques de color. ¡Prepárense para codificar!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (<span class="step-time">7/7/10</span>):</strong> Reproduce la DIAPOSITIVA 11 "Dibujar Código K1", supervisa el proceso de creación del código en pares. Resuelve dudas, explica o corrige lo que sea necesario.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Trabajen juntos para dibujar su código. Recuerden, cada parte del robot va a tener un bloque. ¡Vamos a ver cuán bien pueden codificar!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-5-2" class="activity" data-age="4">
+            <div class="banner" onclick="toggleContent('reto_codificacion_4')">
+                <div class="title">💻 Actividad 5.2: Reto de Codificación (4 años) (3 pasos) ⏰ Tiempo: <span class="activity-time">8/10/13</span></div>
+                <div class="subtitle">Explicar y realizar el reto de codificación para estudiantes de 4 años.</div>
+            </div>
+            <div id="reto_codificacion_4" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (<span class="step-time">1/1/1</span>):</strong> Reproduce la DIAPOSITIVA 12 "Ejemplo Codificación K2" y explica a los Genios en qué consiste el reto.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Equipo CODE SQUAD! Para poder ayudar al profesor Gizmo a armar los robots para la carrera, vamos a facilitar el proceso de armado ayudando a crear un instructivo que permita armar a los robots más rápido. Para ello, nuestros bloques serán las piezas de los robots. Primero vamos a crear el código del instructivo. Vamos a representar cada pieza de los robots con dos bloques de color como está en el ejemplo. Primero dibujo la pieza del robot y luego le asigno dos bloques de color.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (<span class="step-time">2/2/2</span>):</strong> Reproduce la DIAPOSITIVA 13 "Entregar Materiales K2", después distribuye el papel y los materiales y asegúrate que cada niño tenga material para trabajar en parejas. Explica que van a crear un instructivo por equipo.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Aquí tienen su papel y colores. Ahora, en sus hojas, van a dibujar las partes del robot y asignarles bloques de color. ¡Prepárense para codificar!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (<span class="step-time">5/7/10</span>):</strong> Reproduce la DIAPOSITIVA 14 "Dibujar Código K2", supervisa el proceso de creación del código en pares. Resuelve dudas, explica o corrige lo que sea necesario.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Trabajen juntos para dibujar su código. Recuerden, cada parte del robot va a tener dos bloques. ¡Vamos a ver cuán bien pueden codificar!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-5-3" class="activity" data-age="5">
+            <div class="banner" onclick="toggleContent('reto_codificacion_5')">
+                <div class="title">💻 Actividad 5.3: Reto de Codificación (5 años) (3 pasos) ⏰ Tiempo: <span class="activity-time">8/10/13</span></div>
+                <div class="subtitle">Explicar y realizar el reto de codificación para estudiantes de 5 años.</div>
+            </div>
+            <div id="reto_codificacion_5" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (<span class="step-time">1/1/1</span>):</strong> Reproduce la DIAPOSITIVA 15 "Ejemplo Codificación K3" y explica a los Genios en qué consiste el reto.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Equipo CODE SQUAD! Para poder ayudar al profesor Gizmo a armar los robots para la carrera, vamos a facilitar el proceso de armado ayudando a crear un instructivo que permita armar a los robots más rápido. Para ello, nuestros bloques serán las piezas de los robots. Primero vamos a crear el código del instructivo. Vamos a representar cada pieza de los robots con dos bloques de color como está en el ejemplo. Primero dibujo la pieza del robot y luego le asigno dos bloques de color.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (<span class="step-time">2/2/2</span>):</strong> Reproduce la DIAPOSITIVA 16 "Entregar Materiales K3", después distribuye el papel y los materiales y asegúrate que cada niño tenga material para trabajar en parejas. Explica que van a crear un instructivo por equipo.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Aquí tienen su papel y colores. Ahora, en sus hojas, van a dibujar las partes del robot y asignarles bloques de color. ¡Prepárense para codificar!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (<span class="step-time">5/7/10</span>):</strong> Reproduce la DIAPOSITIVA 17 "Dibujar Código K3", supervisa el proceso de creación del código en pares. Resuelve dudas, explica o corrige lo que sea necesario.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Trabajen juntos para dibujar su código. Recuerden, cada parte del robot va a tener dos bloques. ¡Vamos a ver cuán bien pueden codificar!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Las actividades 6 y 7.1 permanecen igual -->
+
+        <div id="activity-7-2" class="activity" data-age="4">
+            <div class="banner" onclick="toggleContent('construccion_bloques_4')">
+                <div class="title">🏗️ Actividad 7.2: Construcción con Bloques (4 años) (1 paso) ⏰ Tiempo: <span class="activity-time">0/7/10</span></div>
+                <div class="subtitle">Construcción de robots siguiendo el código de rescate para estudiantes de 4 años.</div>
+            </div>
+            <div id="construccion_bloques_4" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (<span class="step-time">0/7/10</span>):</strong> Reproduce la DIAPOSITIVA 22 "Código de Rescate K2" y motiva a los Genios que armen los robots siguiendo el código proyectado en la pantalla.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> En la pantalla, verán el 'Código de Rescate Robótico'. Este es el código especial que necesitamos seguir para asegurarnos de que los robots no se desarmen durante la carrera. ¡Vamos a observarlo muy bien! Cada parte del robot tiene un color específico que debemos usar. Sigamos este código paso a paso, con mucho cuidado, para que Speedy, Strongbot y Clever estén listos y fuertes.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-7-3" class="activity" data-age="5">
+            <div class="banner" onclick="toggleContent('construccion_bloques_5')">
+                <div class="title">🏗️ Actividad 7.3: Construcción con Bloques (5 años) (1 paso) ⏰ Tiempo: <span class="activity-time">0/7/10</span></div>
+                <div class="subtitle">Construcción de robots siguiendo el código de rescate para estudiantes de 5 años.</div>
+            </div>
+            <div id="construccion_bloques_5" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (<span class="step-time">0/7/10</span>):</strong> Reproduce la DIAPOSITIVA 23 "Código de Rescate K3" y motiva a los Genios que armen los robots siguiendo el código proyectado en la pantalla.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> En la pantalla, verán el 'Código de Rescate Robótico'. Este es el código especial que necesitamos seguir para asegurarnos de que los robots no se desarmen durante la carrera. ¡Vamos a observarlo muy bien! Cada parte del robot tiene un color específico que debemos usar. Sigamos este código paso a paso, con mucho cuidado, para que Speedy, Strongbot y Clever estén listos y fuertes.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- La actividad 8 permanece igual -->
+
+    </div>
+    
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        function updateContent() {
+            var time = document.getElementById("class-time").value;
+            var age = 3; // Asume una edad por defecto, esto debería ser configurable
+            document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+
+            var activities = document.querySelectorAll('.activity');
+            activities.forEach(function(activity) {
+                var activityTime = activity.querySelector('.activity-time');
+                var steps = activity.querySelectorAll('.step-time');
+                var activityAge = activity.getAttribute('data-age');
+
+                if (activityAge && parseInt(activityAge) !== age) {
+                    activity.style.display = "none";
+                    return;
+                }
+
+                switch(time) {
+                    case "30":
+                        if (activity.id === "activity-7-1" || activity.id === "activity-7-2" || activity.id === "activity-7-3") {
+                            activity.style.display = "none";
+                        } else {
+                            activity.style.display = "block";
+                            updateTimes(activityTime, steps, 0);
+                        }
+                        break;
+                    case "40":
+                        activity.style.display = "block";
+                        updateTimes(activityTime, steps, 1);
+                        break;
+                    case "50":
+                        activity.style.display = "block";
+                        updateTimes(activityTime, steps, 2);
+                        break;
+                }
+            });
+        }
+
+        function updateTimes(activityTime, steps, index) {
+            var times = activityTime.textContent.split('/');
+            activityTime.textContent = times[index] + " minutos";
+
+            steps.forEach(function(step) {
+                var stepTimes = step.textContent.split('/');
+                step.textContent = stepTimes[index] + " minutos";
+            });
+        }
+
+        // Ejecutar updateContent al cargar la página
+        updateContent();
+    </script>
+</body>
+</html>
